@@ -15,7 +15,7 @@
 static int ft_conversions(const char c)
 {
 	if (c == 'c')
-		return ()
+		return (ft_putchar(c));
 }
 
 int	ft_printf(const char *str, ...)
