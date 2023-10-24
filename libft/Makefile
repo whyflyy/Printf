@@ -28,5 +28,4 @@ re: fclean all
 so:
 		$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
 		$(CC) -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
-
 .SILENT:

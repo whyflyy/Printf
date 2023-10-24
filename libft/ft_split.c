@@ -42,6 +42,14 @@ static int	ft_occurence(char const *s, char c)
 	return (word_count);
 }
 
+static void	*ft_free(char **splitted_s, size_t i)
+{
+	while (i--)
+		free(splitted_s[i]);
+	free(splitted_s);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -63,7 +71,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		res[j] = ft_substr(s, i, ft_charcount(s, c, i));
 		if (!res[j++])
-			return (NULL);
+			return (ft_free(res, j));
 		i += ft_charcount(s, c, i);
 	}
 	res[j] = NULL;
