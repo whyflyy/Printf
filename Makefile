@@ -2,7 +2,7 @@ NAME = libftprintf.a
 CC = cc
 CCFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_printf.c
+SRCS = ft_printf.c ft_putchar.c ft_putstr.c ft_print_decimal.c ft_print_unsigned.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -23,3 +23,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+.SILENT:

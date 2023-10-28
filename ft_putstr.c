@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <jcavadas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 09:49:20 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/28 16:37:20 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/24 15:27:52 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/28 16:36:27 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdio.h>
-# include <stdlib.h>
+int	ft_putstr(char *s)
+{
+	size_t	len;
 
-int	ft_printf(const char *str, ...);
-int	ft_putchar(int c);
-int	ft_putstr(char *s);
-int	ft_print_decimal(int n);
-int	ft_print_unsigned(unsigned int n);
-
-#endif
+	if (!s)
+		return (write(1, "(null)", 6));
+	len = ft_strlen(s);
+	write(1, s, len);
+	return (len);
+}
