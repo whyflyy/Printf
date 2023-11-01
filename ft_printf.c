@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:46:27 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/11/01 10:43:07 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/11/01 11:35:16 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,19 +67,19 @@ int	main(void)
 	char	str[] = "UwU OwO";
 	int		n = 42;
 	int		i = -123;
-    int		*ptr;
+    int		*ptr = &i;
 	
-	 res += ft_printf("AwA\n");
-	res += ft_printf("%c\n", c);
-	res += ft_printf("%s\n", str);
-    res += ft_printf("%p\n",0);
-    printf("%p\n", 0);
-	res += ft_printf("%d\n", n);
-	res += ft_printf("%i\n", i);
-	res += ft_printf("%u\n", i);
-	res += ft_printf("%x\n", n);
-	res += ft_printf("%X\n", i);
-	res += ft_printf("%%\n");
+	res += ft_printf("AwA\n");
+	res += ft_printf("Char: %c\n", c);
+	res += ft_printf("String: %s\n", str);
+    res += ft_printf("Pointer: %p\n", ptr);
+	res += ft_printf("Decimal: %d\n", n);
+	res += ft_printf("Int: %i\n", i);
+	res += ft_printf("Unsigned: %u\n", n);
+	res += ft_printf("Hexa lowercase: %x\n", n);
+	res += ft_printf("Hexa uppercase: %X\n", i);
+	res += ft_printf("Percent: %%\n");
 	ft_printf("Res: %d\n", res);
+	ft_printf("String: %s \t Hexa: %x \t Int: %i\n", str, n, i);
 	return (0);
-} */
+}*/
